@@ -1,0 +1,868 @@
+
+<!doctype html>
+<html>
+
+   <!--
+    CREDITS FOR THE IMAGES USED IN THIS FILE:
+        Images: 
+            Genres pulled from:
+                author: Y. Peyankov
+                date: January 18, 2016
+                url: https://unsplash.com/photos/photo-of-assorted-color-magazine-ge256Z4s_jk         
+
+            HomeStudio pulled from:
+                author: William Hall
+                date: July 17, 2024
+                url: https://unsplash.com/photos/a-man-sitting-at-a-desk-in-front-of-a-computer-GaXUP_xyczI
+
+            InterfaceCloseup pulled from:
+                author: Techivation
+                date: April 14, 2023
+                url: https://unsplash.com/photos/PJiGLPr54M8
+
+            LaptopHeadphones pulled from:
+                author: Daria Glakteeva
+                date: September 15, 2024
+                url: https://unsplash.com/photos/an-apple-laptop-computer-sitting-on-top-of-a-table-2QnzuTES1n8 
+
+            Listening pulled from:
+                author: Dushawn Jovic
+                date: January 15, 2021
+                url: https://unsplash.com/photos/woman-in-white-shirt-wearing-black-knit-cap-d7JCyFstmqM 
+
+            TapeLoop pulled from:
+                author: Etienne Girardet
+                date: February 8, 2022
+                url: https://unsplash.com/photos/a-pile-of-black-cords-next-to-a-cassette-behKwB_Nu78
+            
+            WeeklyFeature pulled from:
+                author: BandLab
+                date: October 10, 2022
+                url: https://unsplash.com/photos/a-person-using-a-laptop-1y8e5hpGNzI      
+    -->
+
+    <head>
+
+        <!-- Metadata of the document -->
+        <meta charset="utf-8">
+        <meta name="Keywords" content="HTML, CSS, Responsive Website">
+        <meta name="author" content="Payton Murphy">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- The following lines are required to pull from bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap-grid.css" />
+        <link rel="stylesheet" href="css/grid.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- This gives access to icons -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+        <!-- The following lines of code are required to pull certain fonts used for the website -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+        <title>Muse</title>
+
+        <style>
+
+            body {
+                background-color: #404353;
+            }
+            
+            h1 {
+                font-family: 'Nova Flat', Georgia, 'Times New Roman', Times, serif;
+                color: #FFF9F2;
+                font-size: 1.75rem;
+            }  
+
+            h2 {
+                font-family: 'Poppins', Arial, sans-serif;
+                color: #7FD8C6;
+                font-size: 1.5rem;
+            }
+
+            h2 a {
+                font-family: 'Poppins', Arial, sans-serif;
+                color: #FFF9F2;
+            }
+
+            h3 {
+                font-family: 'Poppins', Arial, sans-serif;
+                color: #FFF9F2;
+                font-size: 1.25rem;
+                padding-top: .25rem;
+                padding-bottom: .25rem;
+                font-weight: normal;
+            }
+
+            h4 {
+                font-family: 'Open Sans', Arial, sans-serif;
+                color: #FFF9F2;
+                font-size: 1rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                font-weight: normal;
+            }
+
+            h5 {
+                font-family: 'Poppins', Arial, sans-serif;
+                color: #7FD8C6;
+                font-size: 2.3rem;
+            }
+            
+            i {
+                color: #FFF9F2;
+            }
+
+
+            .spacerDiv {
+                height: 40px;
+            }
+
+            /* MAIN CONTENT CSS */
+
+            .blogTitleRow {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                background-color: #2D2F3E;
+                border-top: 1px solid #404353;
+            }
+
+            .blogTitle {
+                font-family: 'Poppins', Arial, sans-serif;
+                color: #FFF9F2;
+                font-size: 2.625rem;
+                font-weight: 500;
+                text-align: center;
+            }
+
+            .blogHeader {
+                font-family: 'Poppins', Arial, sans-serif;
+                color: #3C583A;
+                font-size: 2.5rem;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            .blogHeaderRow {
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+                background-color: #C3E1C1;
+            }
+
+            .blogRow {
+                background-color: #C3E1C1;
+            }
+
+            .card {
+                overflow: hidden;
+                border-width: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+            }
+
+            .card-img-top {
+                transition: transform 0.3s ease;
+                z-index: 0;
+            }
+
+            .card-img-top:hover {
+                transform: scale(1.05); /* Zoom on hover*/
+            }
+
+            .card-body {
+                z-index: 1;
+                flex-grow: 1;
+            }
+
+            .weeklyFeatureDate {
+                font-family: 'Open Sans', Arial, sans-serif;
+                color: #3C583A;
+                font-size: 1.5rem;
+                font-weight: 100;
+                margin-bottom: 0.5rem;
+            }
+
+            .weeklyFeatureTitle {
+                font-family: 'Poppins', Arial, sans-serif;
+                color: #3C583A;
+                font-size: 1.75rem;
+                font-weight: 500; 
+            }
+
+            .weeklyFeatureTitle:hover {
+                color: #FFF9F2;
+            }
+
+            .weeklyFeatureDescription {
+                font-family: 'Poppins', Arial, sans-serif;
+                color: #3C583A;
+                font-size: 1.5rem;
+                font-weight: 200;  
+            }
+
+            .weeklyFeatureBody {
+                background-color: #CEEDCC;
+            }
+      
+            /** SECONDARY CONTENT CSS */
+
+            .secondaryHeaderRow {
+                padding-top: 3rem;
+                padding-bottom: 2rem;
+            }
+
+            .secondaryCardDate {
+                font-family: 'Open Sans', Arial, sans-serif;
+                color:#FFF9F2;
+                font-size: 1rem;
+                font-weight: 100;
+                margin-bottom: 0.5rem;
+            }
+
+            .secondaryCardTitle {
+                font-family: 'Poppins', Arial, sans-serif;
+                color:#FFF9F2;
+                font-size: 1.3rem;
+                font-weight: 500; 
+            }
+
+            .secondaryCardTitle:hover {
+                color: #856ADE;
+            }
+
+            .secondaryCardDescription {
+                font-family: 'Poppins', Arial, sans-serif;
+                color:#FFF9F2;
+                font-size: 1rem;
+                font-weight: 200;  
+            }
+
+            .secondaryCardBody {
+                background-color: #46495a;
+            }
+
+            .secondaryButton, .secondaryButton:focus:active {
+                background-color: #C3E1C1;
+                color: #3C583A;
+                padding: 12px 24px;
+                margin-top: 2.5rem;
+                font-size: 1.5rem;
+                font-family: 'Poppins', 'Roboto', Arial, sans-serif;
+                border-radius: 48px;
+                border-width: 0;
+                display: inline-block;
+            }
+
+            .secondaryButton:hover {
+                background-color:  #FFF9F2;
+                color: #3C583A;
+            }
+
+            .secondCardRowMargin {
+                margin-top: 5rem;
+            }      
+
+            /** HEADER & FOOTER CSS */
+
+            .firstRow {
+                padding-top: .3rem;
+                padding-bottom: .3rem;
+                background-color: #2D2F3E;
+                justify-content: space-between;
+
+            }
+
+            .mainButton, .mainButton:focus:active {
+                background-color: #FF6B6B;
+                color: #FFF9F2;
+                padding: 12px 24px;
+                font-size: 1rem;
+                font-family: 'Poppins', 'Roboto', Arial, sans-serif;
+                border-radius: 48px;
+                border-width: 0;
+                display: inline-block;
+            }
+
+            .mainButton:hover {
+                background-color: #f1acb0;
+                color: #FFF9F2;
+            }
+
+            .logoIcons {
+                font-size: 40px;
+                text-align: center;
+            }
+
+            .rowContainer {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                position: absolute;
+            }
+
+            .textLink {
+                color: #FFF9F2;
+            }
+
+            .textLink:hover {
+                color: #EEA63A;
+            }
+
+            .navbar-nav {
+                display: flex;
+                justify-content: flex-end; 
+                width: 100%;
+                gap: 1.25rem;
+            }
+
+            .nav-link {
+                font-family: 'Poppins', Arial, sans-serif;
+                color: #FFF9F2;
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+
+            .nav-link:hover {
+                color: #EEA63A;
+            }
+
+            .navbar-toggler {
+                margin-left: auto;
+                display: flex;
+                border-color: rgba(0, 0, 0, 0);
+                transition: transform 0.3s ease-in-out; 
+            }
+
+            .navbar-toggler.collapsed {
+                transform: translateX(-91px);
+            }
+
+            .navbar-toggler.footer-toggler.collapsed {
+                transform: translateX(-91px);
+            }
+
+
+            /* Screens smaller than large */
+            @media (max-width: 991.98px) {
+                .navbar-nav {
+                    gap: .5rem;
+                    justify-content: flex-start;
+                }
+
+                .navbar-nav .nav-item:last-child {
+                    margin-left: auto; /* Push the Download button to the right */
+                }
+
+                .nav-link {
+                    font-size: 1.25rem;
+                    text-align: left;
+                    margin-right: 1rem;
+                }
+
+                .navbar-nav .nav-item {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                .blogTitleRow {
+                    padding-top: .75rem;
+                    padding-bottom: .2rem;
+                }              
+
+            }
+
+            .homePadding {
+                padding-right: 30px;
+            }
+
+            .blogPadding {
+                padding-right: 45.8px;
+            }
+
+            .supportPadding {
+                padding-right: 9.5px;
+            }
+            
+
+            /* FOOTER CSS */           
+
+            .secondRowFooter {
+                background-color: #2D2F3E;
+                padding-bottom: 2rem;
+            }
+
+            .thirdRowFooter {
+                background-color: #2D2F3E;
+                border-top: 1px solid #404353;
+                padding-top: .3rem;
+                padding-bottom: .3rem;
+            }
+
+            .socialLinksContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                margin-right: 3rem;
+                padding-left: 55px;
+            }
+
+            .socialItem {
+                display: flex;
+                align-items: center;
+            }
+
+            .input-groupContainer {
+                margin-left: 3rem;
+            }
+
+            .socialIcons {
+                font-size: 16px;
+                margin-right: 0.5rem;
+                position: relative;
+            }
+
+            .input-group {
+                position: relative;
+                padding-right: 3rem;
+                max-width: 30rem;
+                min-width: 26rem;
+            }
+
+            .inputButton, .inputButton:focus:active {
+                background-color: #FF6B6B;
+                color: #FFF9F2;
+                border-radius: 12px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 24px;
+                padding-right: 24px;
+                margin-left: -10px; /* Slight overlap to fill in the gap between input box */
+                border: none;
+                position: relative;
+            }
+
+            .inputButton:hover {
+                background-color: #f1acb0;
+                color: #FFF9F2;
+            }
+
+            .inputBox {
+                border-top-left-radius: 12px;
+                border-bottom-left-radius: 12px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                border: none;
+                position: relative;
+            }
+
+            .inputBox:focus {
+                z-index: 0 !important; /* Ensure the button remains on top when input is focused */
+                outline: none;
+                box-shadow: none;
+            }
+
+            /* Adjust layout on medium screens */
+            @media (min-width: 768px) and (max-width: 991.98px) {
+
+                h5, .blogHeader {
+                    font-size: 1.95rem
+                }
+
+                .blogTitle {
+                font-size: 1.95rem;
+                }
+
+                .weeklyFeatureDate {
+                    font-size: 1rem;
+                    font-weight: 300;
+                }
+
+                .weeklyFeatureTitle {
+                    font-size: 1.5rem;
+                }
+
+                .weeklyFeatureDescription {
+                    font-size: 1rem;
+                    font-weight: 300;
+                }
+
+                .secondaryCardDate {
+                    font-size: .8rem;
+                }
+
+                .secondaryCardTitle {
+                    font-size: 1rem;
+                }
+
+                .secondaryCardDescription {
+                    font-size: .8rem;
+                }
+
+            }
+            
+            /* Adjust layout on smaller screens */
+            @media (max-width: 767.98px) {
+
+                h5, .blogHeader {
+                    font-size: 1.7rem
+                }
+
+                .secondRowFooter {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .socialLinksContainer {
+                    margin-bottom: 1rem;
+                }
+
+                .input-groupContainer {
+                    margin-left: 0;
+                    padding-left: 55px;
+                    padding-top: 1rem;
+                }
+
+                .blogTitle {
+                    font-size: 1.7rem;
+                }
+
+                .weeklyFeatureDate, .secondaryCardDate {
+                    font-size: 1rem;
+                    font-weight: 300;
+                }
+
+                .weeklyFeatureTitle, .secondaryCardTitle {
+                    font-size: 1.2rem;
+                }
+
+                .weeklyFeatureDescription, .secondaryCardDescription {
+                    font-size: 1rem;
+                    font-weight: 300;
+                }
+
+                .secondaryPadding {
+                    padding-bottom: 5rem;
+                }
+
+                .secondaryMargin {
+                    margin-top: 5rem;
+                }
+
+                .secondCardRowMargin {
+                    margin-top: 0;
+                }
+
+                .secondaryButton {
+                    margin-top: 2.5rem;
+                }
+
+            }
+
+        </style>
+
+    <script>
+        // Script for navbar-toggler animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const togglers = document.querySelectorAll('.navbar-toggler');
+
+            togglers.forEach(toggler => {
+                toggler.addEventListener('click', () => {
+                    toggler.classList.toggle('collapsed');
+                });
+            });
+        });
+
+        // Function for blog "More" button and second blog post row collapse behavior
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.getElementById('toggleButton');
+            const secondaryRow = document.getElementById('secondaryCardRow');
+
+            // Change the button text to "Less" when the row is shown
+            secondaryRow.addEventListener('shown.bs.collapse', function () {
+                toggleButton.textContent = 'Less';
+            });
+
+            // Change the button text to "More" when the row is hidden
+            secondaryRow.addEventListener('hidden.bs.collapse', function () {
+                toggleButton.textContent = 'More';
+            });
+        });
+    </script>
+
+
+    </head>
+
+    <!-- MAIN CONTENT OF MY PAGE -->
+    <body> 
+        <div>
+            <div class="container-fluid"> 
+
+                <!-- MAIN NAVIGATION -->
+                <div class="row firstRow">
+                    
+                    <!-- LOGO/TITLE -->
+                    <div class="col-4 rowContainer">
+                        <i class="bi bi-soundwave logoIcons"></i>
+                        <h1 class="m-0">Muse</h1>
+                    </div>
+
+                    <div class="col-2"></div> <!-- spacer -->
+
+
+                    <!-- NAVIGATION -->
+                    <div class="col-6">
+                        <nav class="navbar navbar-expand-lg navbar-dark">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link homePadding" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link blogPadding" href="blog.html">Blog</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link supportPadding" href="support.html">Support</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="download.html" class="btn mainButton" type="button">Download</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- SUBHEADER -->
+                <div class="row blogTitleRow">
+                    <div class="col-12">
+                        <p class="blogTitle">Blog</p>
+                    </div>
+                </div>
+
+                <!-- MAIN CONTENT -->
+                <!-- SUBHEADER -->
+                <div class="row blogHeaderRow">
+                    <div class="col-12">
+                        <p class="blogHeader m-0">Weekly Feature</p>
+                    </div>
+                </div>
+
+                <div class="row blogRow">
+                    <div class="col-md-2 col-lg-3 col-sm-1 col-1"></div> <!-- spacer -->
+                    <div class="col-md-8 col-lg-6 col-s-10 col-10">
+                        <div class="card mx-auto">
+                            <a href="#"><img class="card-img-top" src="images/WeeklyFeature.jpg" alt="A person using a laptop with a DAW open on the screen"></a>
+                            <div class="card-body weeklyFeatureBody">
+                                <p class="card-text weeklyFeatureDate">Wednesday, Nov 13, 2024</p>
+                                <p class="cardtitle"><a class="weeklyFeatureTitle link-underline link-underline-opacity-0" href="#">Getting Started with Your First Track</a></p>
+                                <p class="card-text weeklyFeatureDescription">A step-by-step guide to help you dive into your first music production experience, from setup to first sound.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-lg-3 col-sm-1 col-1"></div> <!-- spacer -->
+                </div>
+
+                <div class="spacerDiv blogRow row">&nbsp;</div> <!-- spacer -->
+                <div class="spacerDiv blogRow row">&nbsp;</div> <!-- spacer -->
+
+                <!-- SECONDARY CONTENT -->
+                <!-- SUBHEADER -->
+                <div class="row secondaryHeaderRow">
+                    <div class="col-12">
+                        <h5 class="text-center">More Posts</h5>
+                    </div>
+                </div>
+
+                <!-- FIRST ROW OF CARDS -->
+                <div class="row">
+                    <div class="col-1 d-sm-block d-md-none"></div> <!-- spacer -->
+                    <div class="col-10 col-md-4 col-lg-4 secondaryPadding">
+                        <div class="card">
+                            <a href="#"><img class="card-img-top" src="images/LaptopHeadphones.jpg" alt="A closed laptop with a pair of headphones plugged into them"></a>
+                            <div class="card-body secondaryCardBody">
+                                <p class="card-text secondaryCardDate">Wednesday, Nov 6, 2024</p>
+                                <p class="cardtitle"><a class="secondaryCardTitle link-underline link-underline-opacity-0" href="#">5 Essential Tools for Beginners</a></p>
+                                <p class="card-text secondaryCardDescription">Discover key tools that can enhance your music production experience right from the start.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1 d-sm-block d-md-none"></div> <!-- spacer -->
+
+                    <div class="col-1 d-sm-block d-md-none"></div> <!-- spacer -->
+                    <div class="col-10 col-md-4 col-lg-4 secondaryPadding">
+                        <div class="card">
+                            <a href="#"><img class="card-img-top" src="images/InterfaceCloseup.jpg" alt="A close-up image of a computer screen showing a DAW interface"></a>
+                            <div class="card-body secondaryCardBody">
+                                <p class="card-text secondaryCardDate">Wednesday, Oct 30, 2024</p>
+                                <p class="cardtitle"><a class="secondaryCardTitle link-underline link-underline-opacity-0" href="#">Understanding the Basics of Mixing</a></p>
+                                <p class="card-text secondaryCardDescription">An introductory guide to mixing your first tracks, covering balance, EQ, and basic effects.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1 d-sm-block d-md-none"></div> <!-- spacer -->
+
+                    <div class="col-1 d-sm-block d-md-none"></div> <!-- spacer -->
+                    <div class="col-10 col-md-4 col-lg-4">
+                        <div class="card">
+                            <a href="#"><img class="card-img-top" src="images/HomeStudio.jpg" alt="A person holding a guitar sitting at their desk and looking at a monitor with a DAW on the screen"></a>
+                            <div class="card-body secondaryCardBody">
+                                <p class="card-text secondaryCardDate">Wednesday, Oct 23, 2024</p>
+                                <p class="cardtitle"><a class="secondaryCardTitle link-underline link-underline-opacity-0" href="#">Setting Up Your Home Studio on a Budget</a></p>
+                                <p class="card-text secondaryCardDescription">A guide to setting up a functional home studio without breaking the bank.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1 d-sm-block d-md-none"></div> <!-- spacer -->
+                    
+                </div>
+
+                <!-- SECOND ROW OF CARDS -->
+                <div class="row secondCardRowMargin collapse" id="secondaryCardRow">
+                    <div class="col-1 d-sm-block d-md-none"></div> <!-- spacer -->
+                    <div class="col-10 col-md-4 col-lg-4 secondaryPadding secondaryMargin">
+                        <div class="card">
+                            <a href="#"><img class="card-img-top" src="images/TapeLoop.jpg" alt="A cassette tape with tangled ribbon"></a>
+                            <div class="card-body secondaryCardBody">
+                                <p class="card-text secondaryCardDate">Wednesday, Oct 16, 2024</p>
+                                <p class="cardtitle"><a class="secondaryCardTitle link-underline link-underline-opacity-0" href="#">The Power of Loops in Music Production</a></p>
+                                <p class="card-text secondaryCardDescription">Explore how loops can inspire new ideas and build foundations for tracks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1 d-sm-block d-md-none"></div> <!-- spacer -->
+
+                    <div class="col-1 d-sm-block d-md-none"></div> <!-- spacer -->
+                    <div class="col-10 col-md-4 col-lg-4 secondaryPadding">
+                        <div class="card">
+                            <a href="#"><img class="card-img-top" src="images/Genres.jpg" alt="Boxes of records with tabs of genres written on them between the records"></a>
+                            <div class="card-body secondaryCardBody">
+                                <p class="card-text secondaryCardDate">Wednesday, Oct 9, 2024</p>
+                                <p class="cardtitle"><a class="secondaryCardTitle link-underline link-underline-opacity-0" href="#">5 Inspiring Music Genres to Explore</a></p>
+                                <p class="card-text secondaryCardDescription">Experiment with different genres to find inspiration and develop your unique sound.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1 d-sm-block d-md-none"></div> <!-- spacer -->
+
+                    <div class="col-1 d-sm-block d-md-none"></div> <!-- spacer -->
+                    <div class="col-10 col-md-4 col-lg-4">
+                        <div class="card">
+                            <a href="#"><img class="card-img-top" src="images/Listening.jpg" alt="A person holding a set of headphones up to their ears"></a>
+                            <div class="card-body secondaryCardBody">
+                                <p class="card-text secondaryCardDate">Wednesday, Oct 2, 2024</p>
+                                <p class="cardtitle"><a class="secondaryCardTitle link-underline link-underline-opacity-0" href="#">Finding the Right Sound for Your Project</a></p>
+                                <p class="card-text secondaryCardDescription">Tips on finding the best sounds for different genres and moods, even with a beginner's toolkit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1 d-sm-block d-md-none"></div> <!-- spacer -->
+                </div>
+
+
+                <!-- MORE BUTTON -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <button id="toggleButton" class="btn secondaryButton" type="button" data-bs-toggle="collapse" data-bs-target="#secondaryCardRow" aria-expanded="false" aria-controls="secondaryCardRow">
+                            More
+                        </button>
+                    </div>
+                </div>
+
+                <div class="spacerDiv">&nbsp;</div> <!-- spacer -->
+
+
+                <!-- FOOTER -->
+                <div class="row firstRow">
+                    <!-- LOGO/TITLE -->
+                    <div class="col-4 rowContainer gap-0">
+                        <i class="bi bi-soundwave logoIcons"></i>
+                        <h1 class="m-0">Muse</h1>
+                    </div>
+
+                    <div class="col-2"></div> <!-- spacer -->
+
+                    <!-- NAVIGATION -->
+                    <div class="col-6">
+                        <nav class="navbar navbar-expand-lg navbar-dark">
+                            <button class="navbar-toggler footer-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavFooter" aria-controls="navbarNavFooter" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavFooter">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link homePadding" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link blogPadding" href="blog.html">Blog</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link supportPadding" href="support.html">Support</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="download.html" class="btn mainButton" type="button">Download</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                
+
+                <div class="row pt-4 secondRowFooter footer-row">
+
+                    <!-- SOCIAL LINKS-->
+                    <div class="col-2 socialLinksContainer">
+                        <h2 class="m-0">Social</h2>
+                        <div class="socialItem">
+                            <i class="bi bi-instagram socialIcons"></i>
+                            <h3 class="m-0"><a class="textLink link-underline link-underline-opacity-0" href="#">Instagram</a></h3>
+                        </div>
+                        <div class="socialItem">
+                            <i class="bi bi-facebook socialIcons"></i>
+                            <h3 class="m-0"><a class="textLink link-underline link-underline-opacity-0" href="#">Facebook</a></h3>
+                        </div>
+                        <div class="socialItem">
+                            <i class="bi bi-youtube socialIcons"></i>
+                            <h3 class="m-0"><a class="textLink link-underline link-underline-opacity-0" href="#">Youtube</a></h3>
+                        </div>
+                        <div class="socialItem">
+                            <i class="bi bi-twitter-x socialIcons"></i>
+                            <h3 class="m-0"><a class="textLink link-underline link-underline-opacity-0" href="#">Twitter</a></h3>
+                        </div>
+                    </div>
+
+                    <!-- INPUT GROUP-->
+                    <div class="col-8 input-groupContainer">
+                        <h2 class="m-0">Subscribe</h2>
+                        <div class="input-group">
+                            <input type="text" class="form-control inputBox" placeholder="Email Address" aria-label="Email Address" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                              <button class="btn inputButton" type="button">Join</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-2"></div> <!-- spacer -->
+
+                </div>
+
+                <div class="row thirdRowFooter footer-row">
+                    <div class="socialItem">
+                        <i class="bi bi-c-circle socialIcons"></i>
+                        <h4 class="m-0">2024 Muse Technologies</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

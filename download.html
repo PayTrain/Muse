@@ -1,0 +1,862 @@
+
+<!doctype html>
+<html>
+   <!--
+    CREDITS FOR THE IMAGES USED IN THIS FILE:
+        Images: 
+            OffsetInterface pulled from:
+                author: Techivation
+                date: December 20, 2023
+                url: https://unsplash.com/photos/a-computer-monitor-sitting-next-to-a-brick-wall-tnwCBVYsTU4
+            windows pulled from:
+                url: https://www.svgrepo.com/svg/303223/microsoft-windows-22-logo
+            apple pulled from:
+                url: https://www.svgrepo.com/svg/303125/apple-logo
+            apple pulled from:
+                url: https://www.svgrepo.com/svg/20943/linux  
+   -->
+
+    <head>
+
+        <!-- Metadata of the document -->
+        <meta charset="utf-8">
+        <meta name="Keywords" content="HTML, CSS, Responsive Website">
+        <meta name="author" content="Payton Murphy">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- The following lines are required to pull from bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap-grid.css" />
+        <link rel="stylesheet" href="css/grid.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- This gives access to icons -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+        <!-- The following lines of code are required to pull certain fonts used for the website -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+        <title>Muse</title>
+
+        <style>
+
+            body {
+                background-color: #404353;
+            }
+            
+            h1 {
+                font-family: 'Nova Flat', Georgia, 'Times New Roman', Times, serif;
+                color: #FFF9F2;
+                font-size: 1.75rem;
+            }  
+
+            h2 {
+                font-family: 'Poppins', Arial, sans-serif;
+                color: #7FD8C6;
+                font-size: 1.5rem;
+            }
+
+            h2 a {
+                font-family: 'Poppins', Arial, sans-serif;
+                color: #FFF9F2;
+            }
+
+            h3 {
+                font-family: 'Poppins', Arial, sans-serif;
+                color: #FFF9F2;
+                font-size: 1.25rem;
+                padding-top: .25rem;
+                padding-bottom: .25rem;
+                font-weight: normal;
+            }
+
+            h4 {
+                font-family: 'Open Sans', Arial, sans-serif;
+                color: #FFF9F2;
+                font-size: 1rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                font-weight: normal;
+            }
+
+            h5 {
+                font-family: 'Poppins', Arial, sans-serif;
+                color: #7FD8C6;
+                font-size: 2.3rem;
+            }
+            
+            i {
+                color: #FFF9F2;
+            }
+
+            .spacerDiv {
+                height: 20px;
+            }
+
+            /* MAIN CONTENT CSS */
+
+            .mainImg {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .mainImgColumn {
+                height: 70rem;
+                position: relative;
+            }
+
+            .overlay {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                padding-left: 2rem;
+                gap: 5rem;
+            }
+
+            .mainHeader {
+                font-family: 'Poppins', 'Roboto', Arial, sans-serif;
+                font-size: 2.25rem;
+                color: #FFF9F2;
+                margin: 0;
+            }
+
+            .downloadButton, .downloadButton:focus:active {
+                background-color: #FFF9F2;
+                color: #000;
+                width: 350px;
+                height: 180px;
+                font-family: 'Poppins', 'Roboto', Arial, sans-serif;
+                border-radius: 12px;
+                border-width: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center; 
+                align-items: flex-start;
+                text-align: left;
+                padding-left: 1.5rem;
+            }
+
+            .downloadButton:hover {
+                background-color: #EEA63A;
+                color: #FFF9F2;
+            }
+
+            .downloadButtonHeader {
+                font-size: 2rem;
+                margin: 0;
+            }
+
+            .downloadButtonSubheader {
+                font-size: 1.3rem;
+                margin: 0;
+            }
+
+            .downloadButtonIcon {
+                width: 2.5rem;
+                margin-bottom: 0.5rem;
+            }
+      
+
+            /** SECONDARY CONTENT CSS */
+
+            .secondaryHeaderRow {
+                padding-top: 3rem;
+                padding-bottom: 2rem;
+            }
+
+            .dropIcon {
+                font-size: 25px;
+            }
+
+            .dropHeader {
+                font-family: 'Poppins', Arial, sans-serif;
+                font-size: 1.75rem;
+                color: #FFF9F2;
+            }
+
+            .dropText {
+                font-family: 'Poppins', Arial, sans-serif;
+                font-size: 1.5rem;
+                color: #FFF9F2;
+                font-weight: 300;
+            }
+
+            .dropHeaderContainer {
+                display: inline-flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 10px;
+                cursor: pointer;
+            }
+
+            .dropHeaderContainer:hover .dropHeader {
+                color: #FFD700;
+            }
+
+            .dropHeaderContainer:hover .dropIcon {
+                color: #FFD700;
+            }
+
+            .dropBodyContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+            /** HEADER & FOOTER CSS */
+
+            .firstRow {
+                padding-top: .3rem;
+                padding-bottom: .3rem;
+                background-color: #2D2F3E;
+                justify-content: space-between;
+
+            }
+
+            .mainButton, .mainButton:focus:active {
+                background-color: #FF6B6B;
+                color: #FFF9F2;
+                padding: 12px 24px;
+                font-size: 1rem;
+                font-family: 'Poppins', 'Roboto', Arial, sans-serif;
+                border-radius: 48px;
+                border-width: 0;
+                display: inline-block;
+            }
+
+            .mainButton:hover {
+                background-color: #f1acb0;
+                color: #FFF9F2;
+            }
+
+            .logoIcons {
+                font-size: 40px;
+                text-align: center;
+            }
+
+            .rowContainer {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                position: absolute;
+            }
+
+            .textLink {
+                color: #FFF9F2;
+            }
+
+            .textLink:hover {
+                color: #EEA63A;
+            }
+
+            .navbar-nav {
+                display: flex;
+                justify-content: flex-end; 
+                width: 100%;
+                gap: 1.25rem;
+            }
+
+            .nav-link {
+                font-family: 'Poppins', Arial, sans-serif;
+                color: #FFF9F2;
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+
+            .nav-link:hover {
+                color: #EEA63A;
+            }
+
+            .navbar-toggler {
+                margin-left: auto;
+                display: flex;
+                border-color: rgba(0, 0, 0, 0);
+                transition: transform 0.3s ease-in-out; 
+            }
+
+            .navbar-toggler.collapsed {
+                transform: translateX(-91px);
+            }
+
+            .navbar-toggler.footer-toggler.collapsed {
+                transform: translateX(-91px);
+            }
+
+
+            /* Screens smaller than large */
+            @media (max-width: 991.98px) {
+                .navbar-nav {
+                    gap: .5rem;
+                    justify-content: flex-start;
+                }
+
+                .navbar-nav .nav-item:last-child {
+                    margin-left: auto; /* Push the Download button to the right */
+                }
+
+                .nav-link {
+                    font-size: 1.25rem;
+                    text-align: left;
+                    margin-right: 1rem;
+                }
+
+                .navbar-nav .nav-item {
+                    display: flex;
+                    justify-content: flex-end;
+                }           
+
+            }
+
+            .homePadding {
+                padding-right: 30px;
+            }
+
+            .blogPadding {
+                padding-right: 45.8px;
+            }
+
+            .supportPadding {
+                padding-right: 9.5px;
+            }
+            
+
+            /* FOOTER CSS */           
+
+            .secondRowFooter {
+                background-color: #2D2F3E;
+                padding-bottom: 2rem;
+            }
+
+            .thirdRowFooter {
+                background-color: #2D2F3E;
+                border-top: 1px solid #404353;
+                padding-top: .3rem;
+                padding-bottom: .3rem;
+            }
+
+            .socialLinksContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                margin-right: 3rem;
+                padding-left: 55px;
+            }
+
+            .socialItem {
+                display: flex;
+                align-items: center;
+            }
+
+            .input-groupContainer {
+                margin-left: 3rem;
+            }
+
+            .socialIcons {
+                font-size: 16px;
+                margin-right: 0.5rem;
+                position: relative;
+            }
+
+            .input-group {
+                position: relative;
+                padding-right: 3rem;
+                max-width: 30rem;
+                min-width: 26rem;
+            }
+
+            .inputButton, .inputButton:focus:active {
+                background-color: #FF6B6B;
+                color: #FFF9F2;
+                border-radius: 12px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 24px;
+                padding-right: 24px;
+                margin-left: -10px; /* Slight overlap to fill in the gap between input box */
+                border: none;
+                position: relative;
+            }
+
+            .inputButton:hover {
+                background-color: #f1acb0;
+                color: #FFF9F2;
+            }
+
+            .inputBox {
+                border-top-left-radius: 12px;
+                border-bottom-left-radius: 12px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                border: none;
+                position: relative;
+            }
+
+            .inputBox:focus {
+                z-index: 0 !important; /* Ensure the button remains on top when input is focused */
+                outline: none;
+                box-shadow: none;
+            }
+
+            /* Adjust layout on medium screens */
+            @media (min-width: 768px) and (max-width: 991.98px) {
+
+                h5 {
+                    font-size: 1.95rem
+                }
+
+                .mainImgColumn {
+                    height: 55rem;
+                }
+
+                .overlay {
+                    gap: 3rem;
+                }
+
+                .mainHeader {
+                    font-size: 1.9rem;
+                }
+
+                .downloadButton, .downloadButton:focus:active {
+                    width: 300px;
+                    height: 140px;
+                }
+
+                .downloadButtonHeader {
+                    font-size: 1.5rem;
+                }
+
+                .downloadButtonSubheader {
+                    font-size: 1rem;
+                }
+
+                .downloadButtonIcon {
+                    width: 2rem;
+                    margin-bottom: 0.4rem;
+                }
+
+                .dropHeader {
+                    font-size: 1.4rem;
+                }
+
+                .dropText {
+                    font-size: 1.15rem;
+                }
+
+                .dropIcon {
+                    font-size: 20px;
+                }            
+            }
+            
+            /* Adjust layout on smaller screens */
+            @media (max-width: 767.98px) {
+
+                h5 {
+                    font-size: 1.7rem
+                }
+
+                .secondRowFooter {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .socialLinksContainer {
+                    margin-bottom: 1rem;
+                }
+
+                .input-groupContainer {
+                    margin-left: 0;
+                    padding-left: 55px;
+                    padding-top: 1rem;
+                }
+
+                .mainImgColumn {
+                    height: 40rem;
+                }
+
+                .overlay {
+                    gap: 2rem;
+                }
+
+                .mainHeader {
+                    font-size: 1.5rem;
+                }
+
+                .downloadButton, .downloadButton:focus:active {
+                    width: 250px;
+                    height: 110px;
+                }
+
+                .downloadButtonHeader {
+                    font-size: 1rem;
+                }
+
+                .downloadButtonSubheader {
+                    font-size: .8rem;
+                }
+
+                .downloadButtonIcon {
+                    width: 1.5rem;
+                    margin-bottom: 0.3rem;
+                }                
+
+                .dropHeader {
+                    font-size: 1.15rem;
+                }
+
+                .dropText {
+                    font-size: 1rem;
+                }
+
+                .dropIcon {
+                    font-size: 15px;
+                }              
+
+            }
+
+        </style>
+
+    <script>
+        // Script for navbar-toggler animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const togglers = document.querySelectorAll('.navbar-toggler');
+
+            togglers.forEach(toggler => {
+                toggler.addEventListener('click', () => {
+                    toggler.classList.toggle('collapsed');
+                });
+            });
+        });
+
+        // Function to handle collapse events and icon toggles
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.collapse').forEach(function (collapseElement) {
+                const iconElement = document.querySelector(`.dropIcon[data-icon-target="#${collapseElement.id}"]`);
+
+                if (iconElement) {
+                    collapseElement.addEventListener('show.bs.collapse', function () {
+                        iconElement.classList.remove('bi-caret-right-fill');
+                        iconElement.classList.add('bi-caret-down-fill');
+                    });
+
+                    collapseElement.addEventListener('hide.bs.collapse', function () {
+                        iconElement.classList.remove('bi-caret-down-fill');
+                        iconElement.classList.add('bi-caret-right-fill');
+                    });
+                }
+            });
+        });
+
+    </script>
+
+
+    </head>
+
+    <!-- MAIN CONTENT OF MY PAGE -->
+    <body> 
+        <div>
+            <div class="container-fluid"> 
+
+                <!-- MAIN NAVIGATION -->
+                <div class="row firstRow">
+                    
+                    <!-- LOGO/TITLE -->
+                    <div class="col-4 rowContainer gap-0">
+                        <i class="bi bi-soundwave logoIcons"></i>
+                        <h1 class="m-0">Muse</h1>
+                    </div>
+
+                    <div class="col-2"></div> <!-- spacer -->
+
+
+                    <!-- NAVIGATION -->
+                    <div class="col-6">
+                        <nav class="navbar navbar-expand-lg navbar-dark">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link homePadding" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link blogPadding" href="blog.html">Blog</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link supportPadding" href="support.html">Support</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="download.html" class="btn mainButton" type="button">Download</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- MAIN CONTENT -->
+                <div class="row">
+                    <div class="col-12 p-0 m-0 mainImgColumn">
+                        <img src="images/OffsetInterface.jpg" alt="A close-up image of a monitor with a DAW on the screen" class="mainImg">
+                        <div class="overlay">
+                            <p class="mainHeader">Download Muse for:</p>
+                            <a href="#" class="btn downloadButton" type="button">
+                                <img src="images/windows.svg" alt="The Windows logo" class="downloadButtonIcon">
+                                <p class="downloadButtonHeader">Windows</p>
+                                <p class="downloadButtonSubheader">32 &amp; 64 bit</p>
+                            </a>
+                            <a href="#" class="btn downloadButton" type="button">
+                                <img src="images/apple.svg" alt="The Apple logo" class="downloadButtonIcon">
+                                <p class="downloadButtonHeader">macOS</p>
+                                <p class="downloadButtonSubheader">Universal Binary</p>
+                            </a>
+                            <a href="#" class="btn downloadButton" type="button">
+                                <img src="images/linux.svg" alt="The Linux logo" class="downloadButtonIcon">
+                                <p class="downloadButtonHeader">Linux</p>
+                                <p class="downloadButtonSubheader">64 bit AppImage</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECONDARY CONTENT -->
+                <div class="row secondaryHeaderRow">
+                    <div class="col-1 d-none d-md-block"></div> <!-- spacer -->
+                    <div class="col-12 col-md-11">
+                        <h5>Technical Requirements</h5>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1 d-none d-md-block"></div> <!-- spacer -->
+                    <div class="col-12 col-md-11">
+                        <div class="dropHeaderContainer" data-bs-toggle="collapse" data-bs-target="#answer1" aria-expanded="false" aria-controls="answer1" role="button">
+                            <p class="dropHeader m-0">Processor (CPU)</p>
+                            <i class="bi bi-caret-right-fill dropIcon d-none d-md-inline" data-icon-target="#answer1"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-0 col-md-1"></div> <!-- spacer -->
+                    <div class="col-8 col-md-7 col-lg-6 collapse dropBodyContainer" id="answer1">
+                        <ul class="dropText mb-0">
+                            <li>Minimum: Dual-Core Processor, 2.0 GHz or higher</li>
+                            <li>Recommended: Quad-Core Processor, 3.0 GHz or higher</li>
+                        </ul>
+                        <p class="dropText">
+                            To run Muse effectively, we recommend at least a quad-core processor for smooth performance.
+                        </p>
+                    </div>
+                    <div class="col-4 col-lg-5"></div> <!-- spacer -->
+                </div> 
+
+                <div class="spacerDiv">&nbsp;</div> <!-- spacer -->
+
+
+                <div class="row">
+                    <div class="col-1 d-none d-md-block"></div> <!-- spacer -->
+                    <div class="col-12 col-md-11">
+                        <div class="dropHeaderContainer" data-bs-toggle="collapse" data-bs-target="#answer2" aria-expanded="false" aria-controls="answer2" role="button">
+                            <p class="dropHeader m-0">Memory (RAM)</p>
+                            <i class="bi bi-caret-right-fill dropIcon d-none d-md-inline" data-icon-target="#answer2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-0 col-md-1"></div> <!-- spacer -->
+                    <div class="col-8 col-md-7 col-lg-6 collapse dropBodyContainer" id="answer2">
+                        <ul class="dropText mb-0">
+                            <li>Minimum: 4 GB</li>
+                            <li>Recommended: 8 GB or more</li>
+                        </ul>
+                        <p class="dropText">
+                            For efficient operation, a minimum of 4 GB of RAM is required. For better performance, 
+                            especially when working with multiple tracks, 8 GB or more is ideal.
+                        </p>
+                    </div>
+                    <div class="col-4 col-lg-5"></div> <!-- spacer -->
+                </div> 
+
+                <div class="spacerDiv">&nbsp;</div> <!-- spacer -->
+
+                <div class="row">
+                    <div class="col-1 d-none d-md-block"></div> <!-- spacer -->
+                    <div class="col-12 col-md-11">
+                        <div class="dropHeaderContainer" data-bs-toggle="collapse" data-bs-target="#answer3" aria-expanded="false" aria-controls="answer3" role="button">
+                            <p class="dropHeader m-0">Storage</p>
+                            <i class="bi bi-caret-right-fill dropIcon d-none d-md-inline" data-icon-target="#answer3"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-0 col-md-1"></div> <!-- spacer -->
+                    <div class="col-8 col-md-7 col-lg-6 collapse dropBodyContainer" id="answer3">
+                        <ul class="dropText mb-0">
+                            <li>Minimum: 500 MB free disk space for installation</li>
+                            <li>Additional: At least 5 GB available for audio projects</li>
+                        </ul>
+                        <p class="dropText">
+                            Ensure you have enough storage for both the software and your audio files. An SSD is 
+                            recommended for faster load times.
+                        </p>
+                    </div>
+                    <div class="col-4 col-lg-5"></div> <!-- spacer -->
+                </div> 
+
+                <div class="spacerDiv">&nbsp;</div> <!-- spacer -->
+
+                <div class="row">
+                    <div class="col-1 d-none d-md-block"></div> <!-- spacer -->
+                    <div class="col-12 col-md-11">
+                        <div class="dropHeaderContainer" data-bs-toggle="collapse" data-bs-target="#answer4" aria-expanded="false" aria-controls="answer4" role="button">
+                            <p class="dropHeader m-0">Graphics</p>
+                            <i class="bi bi-caret-right-fill dropIcon d-none d-md-inline" data-icon-target="#answer4"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-0 col-md-1"></div> <!-- spacer -->
+                    <div class="col-8 col-md-7 col-lg-6 collapse dropBodyContainer" id="answer4">
+                        <ul class="dropText mb-0">
+                            <li>Minimum: Integrated graphics (e.g., Intel HD Graphics)</li>
+                            <li>Recommended: Dedicated graphics card with 2 GB VRAM</li>
+                        </ul>
+                        <p class="dropText">
+                            Description: Muse can run on integrated graphics, but for optimal performance, 
+                            especially with video plugins, a dedicated GPU is recommended.
+                        </p>
+                    </div>
+                    <div class="col-4 col-lg-5"></div> <!-- spacer -->
+                </div> 
+
+                <div class="spacerDiv">&nbsp;</div> <!-- spacer -->                
+
+
+
+                <div class="row">
+                    <div class="col-1 d-none d-md-block"></div> <!-- spacer -->
+                    <div class="col-12 col-md-11">
+                        <div class="dropHeaderContainer" data-bs-toggle="collapse" data-bs-target="#answer5" aria-expanded="false" aria-controls="answer5" role="button">
+                            <p class="dropHeader m-0">Internet Connection</p>
+                            <i class="bi bi-caret-right-fill dropIcon d-none d-md-inline" data-icon-target="#answer5"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-0 col-md-1"></div> <!-- spacer -->
+                    <div class="col-8 col-md-7 col-lg-6 collapse dropBodyContainer" id="answer5">
+                        <ul class="dropText">
+                            <li>A stable internet connection is essential for the initial download, updates, and accessing support materials.</li>
+                        </ul>
+                    </div>
+                    <div class="col-4 col-lg-5"></div> <!-- spacer -->
+                </div>                 
+                
+                
+
+                <div class="spacerDiv">&nbsp;</div> <!-- spacer -->
+                <div class="spacerDiv">&nbsp;</div> <!-- spacer -->
+                <div class="spacerDiv">&nbsp;</div> <!-- spacer -->
+
+                
+                <!-- FOOTER -->
+                <div class="row firstRow">
+                    <!-- LOGO/TITLE -->
+                    <div class="col-4 rowContainer">
+                        <i class="bi bi-soundwave logoIcons"></i>
+                        <h1 class="m-0">Muse</h1>
+                    </div>
+
+                    <div class="col-2"></div> <!-- spacer -->
+
+                    <!-- NAVIGATION -->
+                    <div class="col-6">
+                        <nav class="navbar navbar-expand-lg navbar-dark">
+                            <button class="navbar-toggler footer-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavFooter" aria-controls="navbarNavFooter" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavFooter">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link homePadding" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link blogPadding" href="blog.html">Blog</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link supportPadding" href="support.html">Support</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="download.html" class="btn mainButton" type="button">Download</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                
+
+                <div class="row pt-4 secondRowFooter footer-row">
+
+                    <!-- SOCIAL LINKS-->
+                    <div class="col-2 socialLinksContainer">
+                        <h2 class="m-0">Social</h2>
+                        <div class="socialItem">
+                            <i class="bi bi-instagram socialIcons"></i>
+                            <h3 class="m-0"><a class="textLink link-underline link-underline-opacity-0" href="#">Instagram</a></h3>
+                        </div>
+                        <div class="socialItem">
+                            <i class="bi bi-facebook socialIcons"></i>
+                            <h3 class="m-0"><a class="textLink link-underline link-underline-opacity-0" href="#">Facebook</a></h3>
+                        </div>
+                        <div class="socialItem">
+                            <i class="bi bi-youtube socialIcons"></i>
+                            <h3 class="m-0"><a class="textLink link-underline link-underline-opacity-0" href="#">Youtube</a></h3>
+                        </div>
+                        <div class="socialItem">
+                            <i class="bi bi-twitter-x socialIcons"></i>
+                            <h3 class="m-0"><a class="textLink link-underline link-underline-opacity-0" href="#">Twitter</a></h3>
+                        </div>
+                    </div>
+
+                    <!-- INPUT GROUP-->
+                    <div class="col-8 input-groupContainer">
+                        <h2 class="m-0">Subscribe</h2>
+                        <div class="input-group">
+                            <input type="text" class="form-control inputBox" placeholder="Email Address" aria-label="Email Address" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                              <button class="btn inputButton" type="button">Join</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-2"></div> <!-- spacer -->
+
+                </div>
+
+                <div class="row thirdRowFooter footer-row">
+                    <div class="socialItem">
+                        <i class="bi bi-c-circle socialIcons"></i>
+                        <h4 class="m-0">2024 Muse Technologies</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
